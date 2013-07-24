@@ -14,20 +14,20 @@ Getting Started
 
 The first thing you need to do is get access to the [Twitter API](https://dev.twitter.com/).  Once you are 
 set up, you need to retrieve a bearer token from Twitter so that you can access
-the (search API)[https://dev.twitter.com/docs/api/1.1/get/search/tweets].  The search API uses
+the [search API](https://dev.twitter.com/docs/api/1.1/get/search/tweets).  The search API uses
 application-only authentication and instructions on how to get a token can be found 
-(here)[https://dev.twitter.com/docs/auth/application-only-auth].  I used Finagle to do this but you can 
+[here](https://dev.twitter.com/docs/auth/application-only-auth).  I used Finagle to do this but you can 
 just as easily do it with curl or any HTTP client.
 
 You will also need MongoDB installed.  If you are on Linux (or OSX), you can do this through whichever 
 package manager/software updater your distro supports.  On Windows, just follow the 
-instructions (here)[http://docs.mongodb.org/manual/tutorial/install-mongodb-on-windows/].    
+instructions [here](http://docs.mongodb.org/manual/tutorial/install-mongodb-on-windows/).    
 
-Install the (Java SDK)[http://www.oracle.com/technetwork/java/javase/downloads/index.html] 
-and (Maven)[http://maven.apache.org/download.cgi].
+Install the [Java SDK](http://www.oracle.com/technetwork/java/javase/downloads/index.html) 
+and [Maven](http://maven.apache.org/download.cgi).
 
 The last thing you will need is git.  I would assume most of you have it already, but if not, you can 
-grab it through your package manager or go (here)[http://git-scm.com/download/win] for Windows.  Then 
+grab it through your package manager or go [here](http://git-scm.com/download/win) for Windows.  Then 
 check out the docs on GitHub on how to clone a repo.  
 
 Although I am using Scala, if you all you want to do is run the topology, you do not have to have Scala 
@@ -36,7 +36,7 @@ the Scala plugin.  I did have to create a separate library entry for 2.10.2 sinc
 find out how to update Scala IDE to the latest version of 2.10.
 
 
-# Installing
+## Installing
 
 First, clone the repo onto your local machine.
 
@@ -48,7 +48,7 @@ The next step is to make an environmental variable called TWITTER_BEARER_TOKEN a
 your Twitter API bearer token.  I did  this in my run configuration in Eclipse but if you are running 
 from the command line you can set it there.  
 
-# Running
+## Running
 
 If you are in Eclipse, create a run configuration for a Scala Application that targets the 
 `com.infinitemule.hopperhack.storm.PoursquareTopology` class.  Don't forget specify the bearer token 
