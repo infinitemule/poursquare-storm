@@ -10,7 +10,7 @@ spouts, bolts, and topology that were used on the Storm cluster.
 Getting Started
 ---------------
 
-# Prerequisites
+### Prerequisites
 
 The first thing you need to do is get access to the [Twitter API](https://dev.twitter.com/).  Once you are 
 set up, you need to retrieve a bearer token from Twitter so that you can access
@@ -36,7 +36,7 @@ the Scala plugin.  I did have to create a separate library entry for 2.10.2 sinc
 find out how to update Scala IDE to the latest version of 2.10.
 
 
-## Installing
+### Installing
 
 First, clone the repo onto your local machine.
 
@@ -48,7 +48,7 @@ The next step is to make an environmental variable called TWITTER_BEARER_TOKEN a
 your Twitter API bearer token.  I did  this in my run configuration in Eclipse but if you are running 
 from the command line you can set it there.  
 
-## Running
+### Running
 
 If you are in Eclipse, create a run configuration for a Scala Application that targets the 
 `com.infinitemule.hopperhack.storm.PoursquareTopology` class.  Don't forget specify the bearer token 
