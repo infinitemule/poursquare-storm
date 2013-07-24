@@ -56,7 +56,7 @@ environmental variable.
 
 If you are on the command line, you should be able to run `mvn compile` and then: 
 
-  mvn exec:java -Dexec.mainClass=com.infinitemule.hopperhack.storm.PoursquareTopology  
+    mvn exec:java -Dexec.mainClass=com.infinitemule.hopperhack.storm.PoursquareTopology  
 
 The topology will run in local mode for two minutes.  This is hard coded in the class, so you will have to edit the file 
 if you wanted it to run longer.
