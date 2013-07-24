@@ -54,8 +54,9 @@ If you are in Eclipse, create a run configuration for a Scala Application that t
 `com.infinitemule.hopperhack.storm.PoursquareTopology` class.  Don't forget specify the bearer token 
 environmental variable.
 
-If you are on the command line, you should be able to run `mvn compile` and then 
-`mvn exec:java -Dexec.mainClass=com.infinitemule.hopperhack.storm.PoursquareTopology`.  
+If you are on the command line, you should be able to run `mvn compile` and then: 
+
+  mvn exec:java -Dexec.mainClass=com.infinitemule.hopperhack.storm.PoursquareTopology  
 
 The topology will run in local mode for two minutes.  This is hard coded in the class, so you will have to edit the file 
 if you wanted it to run longer.
@@ -63,5 +64,11 @@ if you wanted it to run longer.
 
 Notes
 -----
-
-TODO
+* I am not a Storm expert.  I started learning Storm a few days before the hackathon.  If you see 
+something that can be improved, please let me know.
+* I didn't do any adjustment to the topology.  Everything has a three for a parallelism hint because 
+that's what I used when I was testing.  My guess would be that you would look at the metrics that
+the Storm UI is collecting and make appropriate adjustments to those numbers.
+* I had a hard time finding the proper way of feeding a spout.  I based mine off of the Storm Kestral spout.
+* I also had a hard time finding a good example of how to use Finagle within a Storm bolt.  If you know of 
+a better way of doing this, please let me know.  
