@@ -89,8 +89,9 @@ from the command line you can set it there.  </p>
 <code>com.infinitemule.hopperhack.storm.PoursquareTopology</code> class.  Don't forget specify the bearer token 
 environmental variable.</p>
 
-<p>If you are on the command line, you should be able to run <code>mvn compile</code> and then 
-<code>mvn exec:java -Dexec.mainClass=com.infinitemule.hopperhack.storm.PoursquareTopology</code>.  </p>
+<p>If you are on the command line, you should be able to run <code>mvn compile</code> and then: </p>
+
+<p>mvn exec:java -Dexec.mainClass=com.infinitemule.hopperhack.storm.PoursquareTopology  </p>
 
 <p>The topology will run in local mode for two minutes.  This is hard coded in the class, so you will have to edit the file 
 if you wanted it to run longer.</p>
@@ -98,7 +99,17 @@ if you wanted it to run longer.</p>
 <h2>
 <a name="notes" class="anchor" href="#notes"><span class="octicon octicon-link"></span></a>Notes</h2>
 
-<p>TODO</p>
+<ul>
+<li>I am not a Storm expert.  I started learning Storm a few days before the hackathon.  If you see 
+something that can be improved, please let me know.</li>
+<li>I didn't do any adjustments to the topology.  Everything has a three for a parallelism hint because 
+that's what I used when I was testing.  My guess would be that you would look at the metrics that
+the Storm UI is collecting and make appropriate adjustments to those numbers.</li>
+<li>I had a hard time finding the proper way of feeding a spout.  I based mine off of the Storm Kestral spout.</li>
+<li>I also had a hard time finding a good example of how to use Finagle within a Storm bolt.  If you know of 
+a better way of doing this, please let me know.<br>
+</li>
+</ul>
       </section>
     </div>
 
