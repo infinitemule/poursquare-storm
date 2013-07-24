@@ -66,7 +66,7 @@ Notes
 -----
 * I am not a Storm expert.  I started learning Storm a few days before the hackathon.  If you see 
 something that can be improved, please let me know.
-* I didn't do any adjustment to the topology.  Everything has a three for a parallelism hint because 
+* I didn't do any adjustments to the topology.  Everything has a 3 for a parallelism hint because 
 that's what I used when I was testing.  My guess would be that you would look at the metrics that
 the Storm UI is collecting and make appropriate adjustments to those numbers.
 * I had a hard time finding the proper way of feeding a spout.  I based mine off of the Storm Kestral spout.
