@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Poursquare - Storm : Storm/Finagle Hackathon Submission" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Poursquare - Storm</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/infinitemule/poursquare-storm">View on GitHub</a>
+
+          <h1 id="project_title">Poursquare - Storm</h1>
+          <h2 id="project_tagline">Storm/Finagle Hackathon Submission</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/infinitemule/poursquare-storm/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/infinitemule/poursquare-storm/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a name="stormfinagle-hackathon-submission---poursquare-" class="anchor" href="#stormfinagle-hackathon-submission---poursquare-"><span class="octicon octicon-link"></span></a>Storm/Finagle Hackathon Submission - Poursquare </h1>
+
+<p>This was my submission to the Storm/Finagle Hackathon which took place at hack/reduce 
+in July of 2013.  </p>
+
+<p>This repo contains the code for the Storm portion of the application.  This includes all the 
+spouts, bolts, and topology that were used on the Storm cluster.</p>
+
+<h2>
+<a name="getting-started" class="anchor" href="#getting-started"><span class="octicon octicon-link"></span></a>Getting Started</h2>
+
+<h3>
+<a name="prerequisites" class="anchor" href="#prerequisites"><span class="octicon octicon-link"></span></a>Prerequisites</h3>
+
+<p>The first thing you need to do is get access to the <a href="https://dev.twitter.com/">Twitter API</a>.  Once you are 
+set up, you need to retrieve a bearer token from Twitter so that you can access
+the <a href="https://dev.twitter.com/docs/api/1.1/get/search/tweets">search API</a>.  The search API uses
+application-only authentication and instructions on how to get a token can be found 
+<a href="https://dev.twitter.com/docs/auth/application-only-auth">here</a>.  I used Finagle to do this but you can 
+just as easily do it with curl or any HTTP client.</p>
+
+<p>You will also need MongoDB installed.  If you are on Linux (or OSX), you can do this through whichever 
+package manager/software updater your distro supports.  On Windows, just follow the 
+instructions <a href="http://docs.mongodb.org/manual/tutorial/install-mongodb-on-windows/">here</a>.    </p>
+
+<p>Install the <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">Java SDK</a> 
+and <a href="http://maven.apache.org/download.cgi">Maven</a>.</p>
+
+<p>The last thing you will need is git.  I would assume most of you have it already, but if not, you can 
+grab it through your package manager or go <a href="http://git-scm.com/download/win">here</a> for Windows.  Then 
+check out the docs on GitHub on how to clone a repo.  </p>
+
+<p>Although I am using Scala, if you all you want to do is run the topology, you do not have to have Scala 
+installed.  If you are using Eclipse, you can either download the Scala IDE (which I recommended) or install 
+the Scala plugin.  I did have to create a separate library entry for 2.10.2 since I couldn't 
+find out how to update Scala IDE to the latest version of 2.10.</p>
+
+<h3>
+<a name="installing" class="anchor" href="#installing"><span class="octicon octicon-link"></span></a>Installing</h3>
+
+<p>First, clone the repo onto your local machine.</p>
+
+<p>I am using Maven and not sbt, so if you are using Eclipse, you can just import as a Maven project.  The 
+import into IntelliJ should be pretty straightforward as well (although I am not certain on how 
+to do this). You can also just run Maven from the command line.</p>
+
+<p>The next step is to make an environmental variable called TWITTER_BEARER_TOKEN and set the value to 
+your Twitter API bearer token.  I did  this in my run configuration in Eclipse but if you are running 
+from the command line you can set it there.  </p>
+
+<h3>
+<a name="running" class="anchor" href="#running"><span class="octicon octicon-link"></span></a>Running</h3>
+
+<p>If you are in Eclipse, create a run configuration for a Scala Application that targets the 
+<code>com.infinitemule.hopperhack.storm.PoursquareTopology</code> class.  Don't forget specify the bearer token 
+environmental variable.</p>
+
+<p>If you are on the command line, you should be able to run <code>mvn compile</code> and then 
+<code>mvn exec:java -Dexec.mainClass=com.infinitemule.hopperhack.storm.PoursquareTopology</code>.  </p>
+
+<p>The topology will run in local mode for two minutes.  This is hard coded in the class, so you will have to edit the file 
+if you wanted it to run longer.</p>
+
+<h2>
+<a name="notes" class="anchor" href="#notes"><span class="octicon octicon-link"></span></a>Notes</h2>
+
+<p>TODO</p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Poursquare - Storm maintained by <a href="https://github.com/infinitemule">infinitemule</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
