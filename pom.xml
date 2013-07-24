@@ -60,7 +60,16 @@
       <groupId>storm</groupId>
       <artifactId>storm</artifactId>
       <version>0.8.2</version>
-      <scope>provided</scope>
+      
+      <!-- 
+      I had this uncommented for when I wanted to deploy to the remote cluster.  
+      I thought I remember reading in the documentation that this isn't needed because
+      it is provided by the cluster and including it could cause issues 
+      (my assumption would be class cast exceptions, incompatible versions, all the nasty
+      stuff that can happen with multiple jars of the same library).
+      -->
+      
+      <!-- <scope>provided</scope> -->
     </dependency>
 
 
